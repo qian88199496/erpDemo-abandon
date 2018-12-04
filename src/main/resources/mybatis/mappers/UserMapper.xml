@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wp.mapper.UserMapper">
+    <!-- 查询所有用户信息 -->
+	<select id="findAll" resultType="User">
+		select * from user
+	</select>
+	
+	<!-- 更具姓名查询用户信息 -->
+	<select id="findUserByName" resultType="User">
+		select * from user where name like "%"#{name}"%"
+	</select>
+	<!-- 根据性别查询用户信息 -->
+	<select id="findUserBySex" resultType="User">
+		select * from user where sex=#{sex}
+	</select>
+	
+	<!-- 根据ID查询用户信息 -->
+	<select id="findUserById" resultType="User">
+		select * from user where id=#{id}
+	</select>
+	
+	<!-- 用户名重复查询 -->
+	<select id="checkName" resultType="int">
+	   select count(*) from user
+	   <where>
+	       name=#{name} 
+	       <if test="id!=null and id!=''">
+	           and id!=#{id} 
+	       </if>
+	   </where> 
+	</select>
+	
+	<!-- 更新用户信息 -->
+   <update id="updateUser">
+        update user
+        <set>
+           <if test="name!=null and name!=''">
+             name=#{name},
+           </if>
+           <if test="age!=null and age!=''">
+             age=#{age},
+           </if>
+           <if test="sex!=null and sex!='' or sex == 0">
+             sex=#{sex},
+           </if>
+            statu=1,
+            updateTime=#{updateTime}
+        </set>
+        where id=#{id}
+   </update>
+   
+   <!-- 新增用户信息 -->
+   <insert id="saveUser"
+           parameterType="user"
+           useGeneratedKeys="true"
+           keyProperty="id">
+           insert into user
+           (name,age,sex,createTime,updateTime,statu)
+           values
+           (#{name},#{age},#{sex},#{createTime},#{updateTime},#{statu})
+   </insert>
+   
+   <!-- 根据ID批量删除用户 -->
+   <delete id="deleteUser">
+          delete from user
+          where id in 
+          <foreach collection="ids"
+                   open="(" 
+                   close=")" 
+                   separator=","
+                   item="item">
+                 ${item}
+          </foreach>
+    </delete>
+	
+</mapper>
