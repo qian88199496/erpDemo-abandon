@@ -28,6 +28,10 @@
     
     <!--放行静态资源文件  -->
     <mvc:default-servlet-handler/>
+    <!-- 声明DispatcherServerlet不要拦截下面声明的目录,用于静态资源的加载 -->
+    <mvc:resources location="/common/" mapping="/coomon/**"/>
+    <mvc:resources location="/static/" mapping="/static/**"/>
+    
     
     <!--添加文件上传视图解析器
         注意事项:id的名称必须为multipartResolver

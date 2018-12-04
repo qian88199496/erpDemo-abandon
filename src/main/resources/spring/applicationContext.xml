@@ -45,9 +45,7 @@
 		<property name="minConnectionsPerPartition" value="5" />
 	</bean>
 	
-	
 	<!--4.配置声明式事务处理 -->
-	  
 	<!--4.1 定义事务管理器 -->
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<!--添加数据源  -->
