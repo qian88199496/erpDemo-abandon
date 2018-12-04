@@ -22,6 +22,7 @@ public class TestController {
     @RequestMapping("/aa")
     @ResponseBody
     public SysResult test() {
+        System.out.println("1111");
         return SysResult.build(200, "访问成功");
     }
 
