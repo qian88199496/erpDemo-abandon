@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.erp</groupId>
-  <artifactId>ERP-V01</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>ERP-V01 Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  <!-- 集中定义依赖版本号 -->
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.erp</groupId>
+    <artifactId>ERP-V01</artifactId>
+    <packaging>war</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>ERP-V01 Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+    <!-- 集中定义依赖版本号 -->
     <properties>
         <junit.version>4.10</junit.version>
         <spring.version>4.1.3.RELEASE</spring.version>
@@ -43,7 +43,7 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-    
+
         <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -60,8 +60,8 @@
             <artifactId>spring-aspects</artifactId>
             <version>${spring.version}</version>
         </dependency>
-        
-        
+
+
         <!-- Mybatis -->
         <dependency>
             <groupId>org.mybatis</groupId>
@@ -86,14 +86,14 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
         </dependency>
-        
+
         <!--引入阿里druid监控  -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>${druid.version}</version>
         </dependency>
-        
+
         <!-- 通用Mapper -->
         <dependency>
             <groupId>com.github.abel533</groupId>
@@ -125,7 +125,7 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>${slf4j.version}</version>
         </dependency>
-        
+
         <!-- Jackson Json处理工具包 -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -144,7 +144,7 @@
             <artifactId>httpmime</artifactId>
             <version>4.3.1</version>
         </dependency>
-        
+
         <!-- 消息队列 -->
         <dependency>
             <groupId>com.rabbitmq</groupId>
@@ -152,9 +152,9 @@
             <version>3.5.1</version>
         </dependency>
         <dependency>
-               <groupId>org.springframework.amqp</groupId>
-               <artifactId>spring-rabbit</artifactId>
-               <version>1.4.0.RELEASE</version>
+            <groupId>org.springframework.amqp</groupId>
+            <artifactId>spring-rabbit</artifactId>
+            <version>1.4.0.RELEASE</version>
         </dependency>
 
         <!-- JSP相关 -->
@@ -209,14 +209,14 @@
             <artifactId>jedis</artifactId>
             <version>${jedis.version}</version>
         </dependency>
-        
+
         <!--添加spring-datajar包  -->
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-redis</artifactId>
             <version>1.4.1.RELEASE</version>
         </dependency>
-        
+
         <!-- 字符加密、解密 -->
         <dependency>
             <groupId>commons-codec</groupId>
@@ -230,14 +230,14 @@
             <artifactId>hibernate-validator</artifactId>
             <version>5.1.3.Final</version>
         </dependency>
-        
+
         <!--添加spring-datajar包  -->
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-redis</artifactId>
             <version>1.4.1.RELEASE</version>
         </dependency>
-        
+
         <!-- 定时任务 -->
         <dependency>
             <groupId>org.quartz-scheduler</groupId>
@@ -250,7 +250,7 @@
             <artifactId>c3p0</artifactId>
             <version>0.9.1.2</version>
         </dependency>
-        
+
         <!--dubbo依赖  -->
         <dependency>
             <groupId>org.javassist</groupId>
@@ -277,7 +277,7 @@
             <artifactId>xstream</artifactId>
             <version>1.4.1</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.apache.bsf</groupId>
             <artifactId>bsf-api</artifactId>
@@ -313,7 +313,7 @@
             <artifactId>cxf-rt-transports-http</artifactId>
             <version>2.6.1</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.apache.thrift</groupId>
             <artifactId>libthrift</artifactId>
@@ -324,7 +324,7 @@
             <artifactId>hessian</artifactId>
             <version>4.0.7</version>
         </dependency>
-        
+
         <dependency>
             <groupId>javax.cache</groupId>
             <artifactId>cache-api</artifactId>
@@ -376,8 +376,8 @@
             <artifactId>fst</artifactId>
             <version>1.55</version>
         </dependency>
-        
-                <!-- 全文检索lucene -->
+
+        <!-- 全文检索lucene -->
         <dependency>
             <groupId>org.apache.lucene</groupId>
             <artifactId>lucene-core</artifactId>
@@ -393,7 +393,7 @@
             <artifactId>lucene-queryparser</artifactId>
             <version>5.2.1</version>
         </dependency>
-        
+
         <!-- poi -->
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -430,24 +430,29 @@
             <artifactId>poi-ooxml-schemas</artifactId>
             <version>3.9</version>
         </dependency>
-        
+
         <!-- 整合Shiro框架 -->
-	   <dependency>
-	     <groupId>org.apache.shiro</groupId>
-	     <artifactId>shiro-spring</artifactId>
-	     <version>1.3.2</version>
-	  </dependency>
-	  
-	  <dependency>
-	    <groupId>org.apache.shiro</groupId>
-	    <artifactId>shiro-ehcache</artifactId>
-	    <version>1.3.2</version>
-	  </dependency>
-        
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-ehcache</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.10</version>
+        </dependency>
 
     </dependencies>
-  <build>
-    <plugins>
+    <build>
+        <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -469,5 +474,5 @@
                 </configuration>
             </plugin>
         </plugins>
-  </build>
+    </build>
 </project>
